@@ -1,0 +1,23 @@
+{
+  "name": "o-oyic-mo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jiti": "catalog:",
+    "unbuild": "catalog:",
+    "vite": "catalog:",
+    "typescript": "catalog:",
+    "@types/node": "catalog:",
+    "turbo": "catalog:",
+    "rimraf": "catalog:",
+    "lint-staged": "catalog:",
+    "husky": "catalog:"
+  }
+}

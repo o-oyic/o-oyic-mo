@@ -1,52 +1,23 @@
-# Prerequisites
-*.d
+node_modules
+.DS_Store
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+dist
+dist/*
+yarn.lock
+package-lock.json
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# local env files
+.env.local
+.env.*.local
+.eslintcache
 
-# Precompiled Headers
-*.gch
-*.pch
+# Editor directories and files
+.idea
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# .vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history

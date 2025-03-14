@@ -1,0 +1,23 @@
+{
+  "name": "@o-oyic/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/tsconfig"
+  },
+  "files": [
+    "base.json",
+    "lib.json",
+    "node.json",
+    "web-app.json",
+    "web.json"
+  ],
+  "dependencies": {
+    "vite": "catalog:"
+  }
+}
