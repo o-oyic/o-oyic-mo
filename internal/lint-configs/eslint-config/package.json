@@ -1,0 +1,29 @@
+{
+  "name": "@o-oyic/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/lint-config/eslint-config"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-vue": "catalog:",
+    "globals": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vue-eslint-parser": "catalog:"
+  }
+}

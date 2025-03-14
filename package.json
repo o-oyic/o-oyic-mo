@@ -20,6 +20,14 @@
     "lint-staged": "catalog:",
     "husky": "catalog:",
     "rollup": "catalog:",
-    "rollup-plugin-visualizer": "catalog:"
+    "rollup-plugin-visualizer": "catalog:",
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-vue": "catalog:",
+    "globals": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vue-eslint-parser": "catalog:",
+    "@o-oyic/tsconfig": "workspace:*"
   }
 }
