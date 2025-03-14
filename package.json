@@ -18,6 +18,8 @@
     "turbo": "catalog:",
     "rimraf": "catalog:",
     "lint-staged": "catalog:",
-    "husky": "catalog:"
+    "husky": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-visualizer": "catalog:"
   }
 }
