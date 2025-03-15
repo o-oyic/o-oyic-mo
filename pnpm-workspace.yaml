@@ -24,3 +24,4 @@ catalog:
   "globals": "^16.0.0"
   "typescript-eslint": "^8.26.1"
   "vue-eslint-parser": "^10.1.1"
+  "eslint-plugin-unused-imports": "4.1.4"

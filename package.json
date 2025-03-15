@@ -28,6 +28,7 @@
     "globals": "catalog:",
     "typescript-eslint": "catalog:",
     "vue-eslint-parser": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
     "@o-oyic/tsconfig": "workspace:*"
   }
 }
