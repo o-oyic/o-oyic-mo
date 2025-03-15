@@ -1,12 +1,35 @@
 {
-  "name": "stylelint-config",
+  "name": "@o-oyic/stylelint-config",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "type": "module",
+  "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/lint-config/stylelint-config"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@stylistic/stylelint-plugin": "catalog:",
+    "stylelint-scss": "catalog:"
+  },
+  "devDependencies": {
+    "postcss": "catalog:",
+    "postcss-scss": "catalog:",
+    "stylelint": "catalog:",
+    "stylelint-config-recommended-vue": "catalog:",
+    "stylelint-config-standard-scss": "catalog:",
+    "stylelint-config-standard": "catalog:",
+    "stylelint-config-recommended": "catalog:"
+  }
 }

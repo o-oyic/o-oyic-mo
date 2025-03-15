@@ -1,12 +1,25 @@
 {
-  "name": "prettier-config",
+  "name": "@o-oyic/prettier-config",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/lint-config/prettier-config"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "catalog:"
+  }
 }

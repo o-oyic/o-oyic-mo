@@ -32,7 +32,24 @@
     "eslint-plugin-unused-imports": "catalog:",
     "eslint-plugin-command": "catalog:",
     "eslint-plugin-import-x": "catalog:",
+    "prettier": "catalog:",
+    "stylelint": "catalog:",
+    "stylelint-config-recommended-vue": "catalog:",
+    "stylelint-config-standard": "catalog:",
+    "stylelint-config-standard-scss": "catalog:",
+    "postcss": "catalog:",
+    "postcss-antd-fixes": "catalog:",
+    "postcss-html": "catalog:",
+    "postcss-import": "catalog:",
+    "postcss-preset-env": "catalog:",
+    "postcss-scss": "catalog:",
+    "stylelint-config-recommended": "catalog:",
+    "stylelint-scss": "catalog:",
+    "@stylistic/stylelint-plugin": "catalog:",
     "@o-oyic/tsconfig": "workspace:*",
-    "@o-oyic/eslint-config": "workspace:*"
+    "@o-oyic/eslint-config": "workspace:*",
+    "@o-oyic/prettier-config": "workspace:*",
+    "@o-oyic/stylelint-config": "workspace:*",
+    "@o-oyic/commitlint-config": "workspace:*"
   }
 }
