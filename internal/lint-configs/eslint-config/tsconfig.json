@@ -2,5 +2,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@o-oyic/tsconfig/node.json",
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "moduleResolution": "bundler" // 修改为 node16
+  }
 }

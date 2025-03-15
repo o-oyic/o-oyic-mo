@@ -28,7 +28,7 @@
     /* 模块解析选项 */
     "module": "commonjs" /* 模块解析策略，可选值：none、commonjs、amd、system、umd、es2015、esnext */,
     "rootDir": "./" /* 指定项目根目录 */,
-    "moduleResolution": "node" /* 模块解析策略，可选值：node、classic */,
+    "moduleResolution": "bundler" /* 模块解析策略，可选值：node、bundler、node16、nodenext，node项目建议使用node16选项 */,
     "baseUrl": "./" /* 指定模块解析的基本目录 */,
     "paths": {} /* 指定模块名到基于 baseUrl 的路径映射 */,
     "rootDirs": [] /* 指定多个根目录 */,

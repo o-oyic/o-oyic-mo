@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm -r run stub --if-present"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,9 @@
     "typescript-eslint": "catalog:",
     "vue-eslint-parser": "catalog:",
     "eslint-plugin-unused-imports": "catalog:",
-    "@o-oyic/tsconfig": "workspace:*"
+    "eslint-plugin-command": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "@o-oyic/tsconfig": "workspace:*",
+    "@o-oyic/eslint-config": "workspace:*"
   }
 }

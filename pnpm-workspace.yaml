@@ -25,3 +25,5 @@ catalog:
   "typescript-eslint": "^8.26.1"
   "vue-eslint-parser": "^10.1.1"
   "eslint-plugin-unused-imports": "4.1.4"
+  "eslint-plugin-command": "3.1.0"
+  "eslint-plugin-import-x": "^4.7.0"
