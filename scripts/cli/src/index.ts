@@ -32,7 +32,7 @@ async function runLint({ format }: any) {
   console.log('Running lint...');
 
   if (format) {
-    await execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --fix`, {
+    await execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --fix --allow-empty-input`, {
       stdio: 'inherit',
     });
     await execaCommand(`eslint . --cache --fix`, {
@@ -50,7 +50,7 @@ async function runLint({ format }: any) {
     execaCommand(`prettier . --ignore-unknown --check --cache`, {
       stdio: 'inherit',
     }),
-    execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache`, {
+    execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --allow-empty-input`, {
       stdio: 'inherit',
     }),
   ]);
