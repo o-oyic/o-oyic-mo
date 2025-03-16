@@ -10,11 +10,18 @@
     "prettier": "prettier . --write --cache --log-level warn",
     "stylelint": "stylelint \"**/*.{vue,css,less,scss}\" --cache --fix --allow-empty-input",
     "prepare": "husky",
-    "lint": "oci lint"
+    "lint": "oci lint",
+    "format": "oci lint --format",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
   "devDependencies": {
     "jiti": "catalog:",
     "unbuild": "catalog:",
@@ -55,6 +62,10 @@
     "stylelint-config-recommended-scss": "catalog:",
     "cac": "catalog:",
     "execa": "catalog:",
+    "cz-git": "catalog:",
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "commitizen": "catalog:",
     "@o-oyic/tsconfig": "workspace:*",
     "@o-oyic/eslint-config": "workspace:*",
     "@o-oyic/prettier-config": "workspace:*",

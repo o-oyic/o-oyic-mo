@@ -1,1 +1,3 @@
-pnpm exec oci
+# pnpm oci code-workspace --auto-commit
+
+pnpm exec lint-staged
