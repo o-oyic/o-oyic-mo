@@ -9,7 +9,8 @@
     "eslint": "eslint . --cache --fix",
     "prettier": "prettier . --write --cache --log-level warn",
     "stylelint": "stylelint \"**/*.{vue,css,less,scss}\" --cache --fix --allow-empty-input",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "oci lint"
   },
   "keywords": [],
   "author": "",

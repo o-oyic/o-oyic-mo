@@ -8,7 +8,7 @@ const cli = cac('oci');
 const { execaCommand } = execa;
 
 cli
-  .command('prettier')
+  .command('lint')
   .usage('Batch execute project lint check.')
   .option('--format', 'Format lint problem.')
   .action(runLint);
