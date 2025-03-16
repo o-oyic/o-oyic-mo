@@ -6,6 +6,8 @@ const { execaCommand } = execa;
 try {
   const cli = cac('oci');
 
+  console.log(1);
+
   cli
     .command('lint')
     .usage('Batch execute project lint check.')
