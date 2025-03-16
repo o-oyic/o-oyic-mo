@@ -17,6 +17,7 @@
     "oci": "./bin/oyic-cli.mjs"
   },
   "devDependencies": {
-    "cac": "catalog:"
+    "cac": "catalog:",
+    "execa": "catalog:"
   }
 }
