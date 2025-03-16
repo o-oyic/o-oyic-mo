@@ -1,5 +1,5 @@
-import type { Linter } from "eslint";
-import { javascript, vue, typescript, importPluginConfig, command, ignores } from "./configs";
+import type { Linter } from 'eslint';
+import { javascript, vue, typescript, importPluginConfig, command, ignores } from './configs';
 
 type FlatConfig = Linter.Config;
 

@@ -1,16 +1,16 @@
-import type { Linter } from "eslint";
+import type { Linter, ESLint } from 'eslint';
 
-import { interopDefault } from "../util";
+import { interopDefault } from '../util';
 
 export async function typescript(): Promise<Linter.Config[]> {
   const [pluginTs, parserTs] = await Promise.all([
-    interopDefault(import("@typescript-eslint/eslint-plugin")),
-    interopDefault(import("@typescript-eslint/parser")),
+    interopDefault(import('@typescript-eslint/eslint-plugin')),
+    interopDefault(import('@typescript-eslint/parser')),
   ] as const);
 
   return [
     {
-      files: ["**/*.?([cm])[jt]s?(x)"],
+      files: ['**/*.?([cm])[jt]s?(x)'],
       languageOptions: {
         parser: parserTs,
         parserOptions: {
@@ -18,18 +18,18 @@ export async function typescript(): Promise<Linter.Config[]> {
           ecmaFeatures: {
             jsx: true,
           },
-          ecmaVersion: "latest",
-          extraFileExtensions: [".vue"],
-          jsxPragma: "React",
-          project: "./tsconfig.*.json",
-          sourceType: "module",
+          ecmaVersion: 'latest',
+          extraFileExtensions: ['.vue'],
+          jsxPragma: 'React',
+          project: './tsconfig.*.json',
+          sourceType: 'module',
         },
       },
       plugins: {
-        "@typescript-eslint": pluginTs as any,
+        '@typescript-eslint': pluginTs as unknown as ESLint.Plugin,
       },
       rules: {
-        ...pluginTs.configs["eslint-recommended"]?.overrides?.[0]?.rules,
+        ...pluginTs.configs['eslint-recommended']?.overrides?.[0]?.rules,
         ...pluginTs.configs?.strict?.rules,
         // "@typescript-eslint/ban-ts-comment": [
         //   "error",
@@ -45,13 +45,13 @@ export async function typescript(): Promise<Linter.Config[]> {
         // "@typescript-eslint/consistent-type-definitions": "off",
         // "@typescript-eslint/explicit-function-return-type": "off",
         // "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-empty-function": [
-          "error",
+        '@typescript-eslint/no-empty-function': [
+          'error',
           {
-            allow: ["arrowFunctions", "functions", "methods"],
+            allow: ['arrowFunctions', 'functions', 'methods'],
           },
         ],
-        // "@typescript-eslint/no-explicit-any": "off",
+        '@typescript-eslint/no-explicit-any': 'off',
         // "@typescript-eslint/no-namespace": "off",
         // "@typescript-eslint/no-non-null-assertion": "error",
         // "@typescript-eslint/no-unused-expressions": "off",

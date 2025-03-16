@@ -1,49 +1,51 @@
-import type { Linter } from "eslint";
-import globals from "globals";
+import { defineConfig } from 'eslint/config';
+import globals from 'globals';
+import { interopDefault } from '../util';
 
-import { interopDefault } from "../util";
+type ConfigWithExtendsArray = Parameters<typeof defineConfig>[0];
 
-export async function vue(): Promise<Linter.Config[]> {
+export async function vue(): Promise<ConfigWithExtendsArray> {
   const [vuePlugin, vueParser, tsParser] = await Promise.all([
-    interopDefault(import("eslint-plugin-vue")),
-    interopDefault(import("vue-eslint-parser")),
-    interopDefault(import("@typescript-eslint/parser")),
+    interopDefault(import('eslint-plugin-vue')),
+    interopDefault(import('vue-eslint-parser')),
+    interopDefault(import('@typescript-eslint/parser')),
   ] as const);
-
   return [
     {
-      files: ["**/*.vue"],
+      files: ['**/*.vue'],
+      extends: [
+        ...vuePlugin.configs['flat/recommended'],
+        ...vuePlugin.configs['flat/essential'],
+        ...vuePlugin.configs['flat/strongly-recommended'],
+      ],
       languageOptions: {
         globals: {
           // 全局变量，设置vue的宏定义为全局
           ...globals.browser,
           ...globals.node,
-          defineProps: "readable",
-          defineEmits: "readable",
-          defineModel: "readable",
-          defineExpose: "readable",
-          defineOptions: "readable",
-          defineSlots: "readable",
+          defineProps: 'readable',
+          defineEmits: 'readable',
+          defineModel: 'readable',
+          defineExpose: 'readable',
+          defineOptions: 'readable',
+          defineSlots: 'readable',
         },
         parser: vueParser,
         parserOptions: {
           ecmaFeatures: {
             jsx: true,
           },
-          extraFileExtensions: [".vue"],
+          extraFileExtensions: ['.vue'],
           parser: tsParser,
-          sourceType: "module",
+          sourceType: 'module',
         },
       },
       plugins: {
         vue: vuePlugin,
       },
-      processor: vuePlugin.processors[".vue"],
+      processor: vuePlugin.processors['.vue'],
       rules: {
         ...vuePlugin.configs.base.rules,
-        ...vuePlugin.configs["vue3-essential"].rules,
-        ...vuePlugin.configs["vue3-strongly-recommended"].rules,
-        ...vuePlugin.configs["vue3-recommended"].rules,
 
         // "vue/attribute-hyphenation": [
         //   "error",

@@ -32,7 +32,7 @@
 - `"no-import-assign"`: 禁止对导入的绑定进行赋值
 - `"no-invalid-regexp"`: 禁止在RegExp构造函数中使用无效的正则表达式
 - `"no-irregular-whitespace"`: 禁止使用不规则的空白字符
-- `"no-iterator"`: 禁止使用__iterator__属性
+- `"no-iterator"`: 禁止使用**iterator**属性
 - `"no-labels"`: 禁止使用标签语句
 - `"no-lone-blocks"`: 禁止不必要的嵌套块
 - `"no-loss-of-precision"`: 禁止在数值字面量中使用可能导致精度丢失的表示法
@@ -46,12 +46,12 @@
 - `"no-obj-calls"`: 禁止将全局对象当作函数调用
 - `"no-octal"`: 禁止使用八进制字面量
 - `"no-octal-escape"`: 禁止在字符串字面量中使用八进制转义序列
-- `"no-proto"`: 禁止使用__proto__属性
+- `"no-proto"`: 禁止使用**proto**属性
 - `"no-prototype-builtins"`: 禁止直接在对象实例上调用Object.prototype的方法
 - `"no-redeclare"`: 禁止重复声明变量
 - `"no-regex-spaces"`: 禁止正则表达式中使用多个空格
 - `"no-restricted-globals"`: 禁止使用特定的全局变量（global和self）
-- `"no-restricted-properties"`: 禁止使用特定对象的特定属性（如__proto__等）
+- `"no-restricted-properties"`: 禁止使用特定对象的特定属性（如**proto**等）
 - `"no-restricted-syntax"`: 禁止使用特定的语法（如debugger语句等）
 - `"no-self-assign"`: 禁止自我赋值
 - `"no-self-compare"`: 禁止自身比较
@@ -97,7 +97,7 @@
 - `"symbol-description"`: 要求symbol描述
 - `"unicode-bom"`: 禁止使用Unicode字节顺序标记(BOM)
 - `"unused-imports/no-unused-imports"`: 禁止未使用的导入
-- `"unused-imports/no-unused-vars"`: 禁止未使用的变量，但允许以_开头的未使用参数
+- `"unused-imports/no-unused-vars"`: 禁止未使用的变量，但允许以\_开头的未使用参数
 - `"use-isnan"`: 要求使用isNaN()检查NaN
 - `"valid-typeof"`: 强制typeof表达式与有效的字符串进行比较
 - `"vars-on-top"`: 要求所有的var声明出现在它们所在的作用域顶部
