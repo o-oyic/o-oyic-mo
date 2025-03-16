@@ -55,16 +55,16 @@ export async function typescript(): Promise<Linter.Config[]> {
         // "@typescript-eslint/no-namespace": "off",
         // "@typescript-eslint/no-non-null-assertion": "error",
         // "@typescript-eslint/no-unused-expressions": "off",
-        // "@typescript-eslint/no-unused-vars": [
-        //   "error",
-        //   {
-        //     argsIgnorePattern: "^_",
-        //     varsIgnorePattern: "^_",
-        //   },
-        // ],
-        // "@typescript-eslint/no-use-before-define": "off",
-        // "@typescript-eslint/no-var-requires": "error",
-        // "unused-imports/no-unused-vars": "off",
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+          },
+        ],
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-var-requires': 'error',
+        'unused-imports/no-unused-vars': 'off',
       },
     },
   ];

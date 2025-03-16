@@ -52,10 +52,12 @@
     "stylelint-scss": "catalog:",
     "@stylistic/stylelint-plugin": "catalog:",
     "stylelint-config-recommended-scss": "catalog:",
+    "cac": "catalog:",
     "@o-oyic/tsconfig": "workspace:*",
     "@o-oyic/eslint-config": "workspace:*",
     "@o-oyic/prettier-config": "workspace:*",
     "@o-oyic/stylelint-config": "workspace:*",
-    "@o-oyic/commitlint-config": "workspace:*"
+    "@o-oyic/commitlint-config": "workspace:*",
+    "@o-oyic/cli": "workspace:*"
   }
 }
