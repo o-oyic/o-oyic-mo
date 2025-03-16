@@ -53,6 +53,7 @@
     "@stylistic/stylelint-plugin": "catalog:",
     "stylelint-config-recommended-scss": "catalog:",
     "cac": "catalog:",
+    "execa": "catalog:",
     "@o-oyic/tsconfig": "workspace:*",
     "@o-oyic/eslint-config": "workspace:*",
     "@o-oyic/prettier-config": "workspace:*",

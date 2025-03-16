@@ -44,3 +44,4 @@ catalog:
   '@stylistic/stylelint-plugin': '^3.1.2'
   'stylelint-config-recommended-scss': '^14.1.0'
   'cac': '^6.7.14'
+  'execa': '^9.5.2'
