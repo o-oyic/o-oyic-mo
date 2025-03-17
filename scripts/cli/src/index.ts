@@ -1,55 +1,21 @@
 import cac from 'cac';
-import * as execa from 'execa';
-
-const { execaCommand } = execa;
+import { defineLintCommand } from './lint';
 
 try {
-  const cli = cac('oci');
+  const oci = cac('oci');
 
-  cli
-    .command('lint')
-    .usage('Batch execute project lint check.')
-    .option('--format', 'Format lint problem.')
-    .action(runLint);
+  defineLintCommand(oci);
 
   // Invalid command
-  cli.on('command:*', () => {
+  oci.on('command:*', () => {
     console.error('Invalid command!');
     process.exit(1);
   });
 
-  cli.usage('vsh');
-  cli.help();
-  cli.parse();
+  oci.usage('oci');
+  oci.help();
+  oci.parse();
 } catch (error) {
   console.error(error);
   process.exit(1);
-}
-
-async function runLint({ format }: any) {
-  console.log('Running lint...');
-
-  if (format) {
-    await execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --fix --allow-empty-input`, {
-      stdio: 'inherit',
-    });
-    await execaCommand(`eslint . --cache --fix`, {
-      stdio: 'inherit',
-    });
-    await execaCommand(`prettier . --write --cache --log-level warn`, {
-      stdio: 'inherit',
-    });
-    return;
-  }
-  await Promise.all([
-    execaCommand(`eslint . --cache`, {
-      stdio: 'inherit',
-    }),
-    execaCommand(`prettier . --ignore-unknown --check --cache`, {
-      stdio: 'inherit',
-    }),
-    execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --allow-empty-input`, {
-      stdio: 'inherit',
-    }),
-  ]);
 }
