@@ -4,6 +4,7 @@ import { defineLintCommand } from './lint';
 try {
   const oci = cac('oci');
 
+  // oci lint [options = --format]
   defineLintCommand(oci);
 
   // Invalid command

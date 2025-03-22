@@ -1,5 +1,5 @@
 {
-  "name": "@o-oyic/tsconfig",
+  "name": "@oyic/tsconfig",
   "version": "1.0.0",
   "private": true,
   "type": "module",

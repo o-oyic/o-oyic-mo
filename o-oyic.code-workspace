@@ -1,11 +1,11 @@
 {
   "folders": [
     {
-      "name": "@o-oyic/tsconfig",
+      "name": "@oyic/tsconfig",
       "path": "internal/lint-config/tsconfig",
     },
     {
-      "name": "@o-oyic/eslint-config",
+      "name": "@oyic/eslint-config",
       "path": "internal/lint-config/eslint-config",
     },
   ],

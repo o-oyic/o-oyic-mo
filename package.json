@@ -66,11 +66,11 @@
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
     "commitizen": "catalog:",
-    "@o-oyic/tsconfig": "workspace:*",
-    "@o-oyic/eslint-config": "workspace:*",
-    "@o-oyic/prettier-config": "workspace:*",
-    "@o-oyic/stylelint-config": "workspace:*",
-    "@o-oyic/commitlint-config": "workspace:*",
-    "@o-oyic/cli": "workspace:*"
+    "@oyic/tsconfig": "workspace:*",
+    "@oyic/eslint-config": "workspace:*",
+    "@oyic/prettier-config": "workspace:*",
+    "@oyic/stylelint-config": "workspace:*",
+    "@oyic/commitlint-config": "workspace:*",
+    "@oyic/cli": "workspace:*"
   }
 }

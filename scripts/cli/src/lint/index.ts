@@ -1,15 +1,8 @@
 import type { CAC } from 'cac';
 import * as execa from 'execa';
+import type { LintCommandOptions } from '../type';
 
 const { execaCommand } = execa;
-
-interface LintCommandOptions {
-  /**
-   * 脚本命令是否传递了format选项
-   * `oci lint --format`
-   */
-  format?: boolean;
-}
 
 async function runLint({ format }: LintCommandOptions) {
   console.log('Running lint...');

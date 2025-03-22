@@ -1,4 +1,4 @@
-import stylelint from '@o-oyic/stylelint-config';
+import stylelint from '@oyic/stylelint-config';
 
 export default {
   extends: [stylelint],

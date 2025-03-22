@@ -1,1 +1,1 @@
-export { default } from '@o-oyic/commitlint-config';
+export { default } from '@oyic/commitlint-config';

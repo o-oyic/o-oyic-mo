@@ -1,1 +1,1 @@
-export { default } from '@o-oyic/prettier-config';
+export { default } from '@oyic/prettier-config';

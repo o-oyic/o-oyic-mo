@@ -1,3 +1,3 @@
-import { defineConfig } from '@o-oyic/eslint-config';
+import { defineConfig } from '@oyic/eslint-config';
 
 export default defineConfig();

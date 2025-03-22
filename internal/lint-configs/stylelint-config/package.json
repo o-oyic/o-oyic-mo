@@ -1,5 +1,5 @@
 {
-  "name": "@o-oyic/stylelint-config",
+  "name": "@oyic/stylelint-config",
   "version": "1.0.0",
   "private": true,
   "type": "module",
