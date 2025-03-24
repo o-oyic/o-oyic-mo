@@ -29,6 +29,7 @@ async function createCodeWorkspace({ autoCommit = false, spaces = 2 }: CodeWorks
   await prettierFormat(outputPath);
   console.log(autoCommit);
 
+  // TODO 自动提交到git缓存区，不然会存在其他文件都提交了，但是code-workspace文件还在更改状态
   // if (autoCommit) {
   //   await gitAdd(CODE_WORKSPACE_FILE, monorepoRoot);
   // }
