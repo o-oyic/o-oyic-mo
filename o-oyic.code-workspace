@@ -1,12 +1,64 @@
 {
   "folders": [
     {
-      "name": "@oyic/tsconfig",
-      "path": "internal/lint-config/tsconfig",
+      "name": "@oyic/commitlint-config",
+      "path": "internal/lint-configs/commitlint-config",
     },
     {
       "name": "@oyic/eslint-config",
-      "path": "internal/lint-config/eslint-config",
+      "path": "internal/lint-configs/eslint-config",
+    },
+    {
+      "name": "@oyic/prettier-config",
+      "path": "internal/lint-configs/prettier-config",
+    },
+    {
+      "name": "@oyic/stylelint-config",
+      "path": "internal/lint-configs/stylelint-config",
+    },
+    {
+      "name": "@oyic/tailwind-config",
+      "path": "internal/tailwind-config",
+    },
+    {
+      "name": "@oyic/tsconfig",
+      "path": "internal/tsconfig",
+    },
+    {
+      "name": "@oyic/vite-config",
+      "path": "internal/vite-config",
+    },
+    {
+      "name": "@oyic/idb",
+      "path": "packages/idb",
+    },
+    {
+      "name": "@oyic/idoc",
+      "path": "packages/idoc",
+    },
+    {
+      "name": "@oyic/kit",
+      "path": "packages/kit",
+    },
+    {
+      "name": "oyic",
+      "path": "packages/oyic",
+    },
+    {
+      "name": "@oyic/sa-mirror",
+      "path": "packages/sa-mirror",
+    },
+    {
+      "name": "@oyic/shared",
+      "path": "packages/shared",
+    },
+    {
+      "name": "@oyic/cli",
+      "path": "scripts/cli",
+    },
+    {
+      "name": "@oyic/node-utils",
+      "path": "scripts/node-utils",
     },
   ],
 }
