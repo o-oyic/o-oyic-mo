@@ -15,6 +15,9 @@ catalogs:
     '@eslint/js':
       specifier: ^9.22.0
       version: 9.22.0
+    '@manypkg/get-packages':
+      specifier: ^2.2.2
+      version: 2.2.2
     '@stylistic/stylelint-plugin':
       specifier: ^3.1.2
       version: 3.1.2
@@ -54,6 +57,9 @@ catalogs:
     execa:
       specifier: ^9.5.2
       version: 9.5.2
+    find-up:
+      specifier: ^7.0.0
+      version: 7.0.0
     globals:
       specifier: ^16.0.0
       version: 16.0.0
@@ -164,6 +170,9 @@ importers:
       '@oyic/eslint-config':
         specifier: workspace:*
         version: link:internal/lint-configs/eslint-config
+      '@oyic/node-utils':
+        specifier: workspace:*
+        version: link:scripts/node-utils
       '@oyic/prettier-config':
         specifier: workspace:*
         version: link:internal/lint-configs/prettier-config
@@ -406,6 +415,9 @@ importers:
 
   scripts/cli:
     devDependencies:
+      '@oyic/node-utils':
+        specifier: workspace:*
+        version: link:../node-utils
       cac:
         specifier: 'catalog:'
         version: 6.7.14
@@ -413,7 +425,14 @@ importers:
         specifier: 'catalog:'
         version: 9.5.2
 
-  scripts/node-utils: {}
+  scripts/node-utils:
+    dependencies:
+      '@manypkg/get-packages':
+        specifier: 'catalog:'
+        version: 2.2.2
+      find-up:
+        specifier: 'catalog:'
+        version: 7.0.0
 
 packages:
 
@@ -1136,6 +1155,18 @@ packages:
 
   '@keyv/serialize@1.0.3':
     resolution: {integrity: sha512-qnEovoOp5Np2JDGonIDL6Ayihw0RhnRh6vxPuHo4RDn1UOzwEo4AeIfpL6UGIrsceWrCMiVPgwRjbHu4vYFc3g==}
+
+  '@manypkg/find-root@2.2.3':
+    resolution: {integrity: sha512-jtEZKczWTueJYHjGpxU3KJQ08Gsrf4r6Q2GjmPp/RGk5leeYAA1eyDADSAF+KVCsQ6EwZd/FMcOFCoMhtqdCtQ==}
+    engines: {node: '>=14.18.0'}
+
+  '@manypkg/get-packages@2.2.2':
+    resolution: {integrity: sha512-3+Zd8kLZmsyJFmWTBtY0MAuCErI7yKB2cjMBlujvSVKZ2R/BMXi0kjCXu2dtRlSq/ML86t1FkumT0yreQ3n8OQ==}
+    engines: {node: '>=14.18.0'}
+
+  '@manypkg/tools@1.1.2':
+    resolution: {integrity: sha512-3lBouSuF7CqlseLB+FKES0K4FQ02JrbEoRtJhxnsyB1s5v4AP03gsoohN8jp7DcOImhaR9scYdztq3/sLfk/qQ==}
+    engines: {node: '>=14.18.0'}
 
   '@napi-rs/wasm-runtime@0.2.7':
     resolution: {integrity: sha512-5yximcFK5FNompXfJFoWanu5l8v1hNGqNHh9du1xETp9HWk/B/PzvchX55WYOPaIeNglG8++68AAiauBAtbnzw==}
@@ -2435,6 +2466,9 @@ packages:
   jiti@2.4.2:
     resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
+
+  jju@1.4.0:
+    resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -4407,6 +4441,21 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
+  '@manypkg/find-root@2.2.3':
+    dependencies:
+      '@manypkg/tools': 1.1.2
+
+  '@manypkg/get-packages@2.2.2':
+    dependencies:
+      '@manypkg/find-root': 2.2.3
+      '@manypkg/tools': 1.1.2
+
+  '@manypkg/tools@1.1.2':
+    dependencies:
+      fast-glob: 3.3.3
+      jju: 1.4.0
+      js-yaml: 4.1.0
+
   '@napi-rs/wasm-runtime@0.2.7':
     dependencies:
       '@emnapi/core': 1.3.1
@@ -5764,6 +5813,8 @@ snapshots:
   jiti@1.21.7: {}
 
   jiti@2.4.2: {}
+
+  jju@1.4.0: {}
 
   js-tokens@4.0.0: {}
 

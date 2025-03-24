@@ -12,7 +12,7 @@
     "prepare": "husky",
     "lint:prettier": "prettier . --write --cache --log-level warn",
     "lint:style": "stylelint \"**/*.{vue,css,less,scss}\" --cache --fix",
-    "lint:eslint": "eslint . --cache --fix",
+    "lint:es": "eslint . --cache --fix",
     "lint": "oci lint",
     "format": "oci lint --format",
     "commit": "git-cz"
@@ -24,6 +24,7 @@
     "@oyic/cli": "workspace:*",
     "@oyic/commitlint-config": "workspace:*",
     "@oyic/eslint-config": "workspace:*",
+    "@oyic/node-utils":"workspace:*",
     "@oyic/prettier-config": "workspace:*",
     "@oyic/stylelint-config": "workspace:*",
     "@oyic/tsconfig": "workspace:*",

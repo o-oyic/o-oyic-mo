@@ -1,5 +1,4 @@
-# 在代码提交时自动执行
-# pnpm oci code-workspace --auto-commit
+pnpm oci code-workspace --auto-commit
 
 pnpm oci lint
 

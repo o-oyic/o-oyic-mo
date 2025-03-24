@@ -51,3 +51,5 @@ catalog:
   'commitizen': '^4.3.1'
   'jsonc-eslint-parser': '^2.4.0'
   'eslint-plugin-jsonc': '^2.19.1'
+  '@manypkg/get-packages': '^2.2.2'
+  'find-up': '^7.0.0'

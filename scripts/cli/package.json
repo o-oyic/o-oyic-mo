@@ -17,6 +17,7 @@
     "stub": "pnpm unbuild --stub"
   },
   "devDependencies": {
+    "@oyic/node-utils":"workspace:*",
     "cac": "catalog:",
     "execa": "catalog:"
   }

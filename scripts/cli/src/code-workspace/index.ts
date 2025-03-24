@@ -1,78 +1,60 @@
-// import type { CAC } from 'cac';
+import type { CAC } from 'cac';
+import { findMonorepoRoot, getPackages, outputJSON, prettierFormat, toPosixPath } from '@oyic/node-utils';
+import { join, relative } from 'node:path';
 
-// import { join, relative } from 'node:path';
+const CODE_WORKSPACE_FILE = join('o-oyic.code-workspace');
 
-// import {
-//   colors,
-//   findMonorepoRoot,
-//   getPackages,
-//   gitAdd,
-//   outputJSON,
-//   prettierFormat,
-//   toPosixPath,
-// } from '@vben/node-utils';
+interface CodeWorkspaceCommandOptions {
+  autoCommit?: boolean;
+  spaces?: number;
+}
 
-// const CODE_WORKSPACE_FILE = join('o-oyic.code-workspace');
+async function createCodeWorkspace({ autoCommit = false, spaces = 2 }: CodeWorkspaceCommandOptions) {
+  const { packages, rootDir } = await getPackages();
 
-// interface CodeWorkspaceCommandOptions {
-//   autoCommit?: boolean;
-//   spaces?: number;
-// }
+  let folders = packages.map((pkg) => {
+    const { dir, packageJson } = pkg;
+    return {
+      name: packageJson.name,
+      path: toPosixPath(relative(rootDir, dir)),
+    };
+  });
 
-// /*
-// 1.找到所有
-// 2.
+  folders = folders.filter(Boolean);
 
-// */
+  const monorepoRoot = findMonorepoRoot();
+  const outputPath = join(monorepoRoot, CODE_WORKSPACE_FILE);
+  await outputJSON(outputPath, { folders }, spaces);
 
-// async function createCodeWorkspace({ autoCommit = false, spaces = 2 }: CodeWorkspaceCommandOptions) {
-//   const { packages, rootDir } = await getPackages();
+  await prettierFormat(outputPath);
+  console.log(autoCommit);
 
-//   let folders = packages.map((pkg) => {
-//     const { dir, packageJson } = pkg;
-//     return {
-//       name: packageJson.name,
-//       path: toPosixPath(relative(rootDir, dir)),
-//     };
-//   });
+  // if (autoCommit) {
+  //   await gitAdd(CODE_WORKSPACE_FILE, monorepoRoot);
+  // }
+}
 
-//   folders = folders.filter(Boolean);
+async function runCodeWorkspace({ autoCommit, spaces }: CodeWorkspaceCommandOptions) {
+  await createCodeWorkspace({
+    autoCommit,
+    spaces,
+  });
+  // if (autoCommit) {
+  //   return;
+  // }
+}
 
-//   const monorepoRoot = findMonorepoRoot();
-//   const outputPath = join(monorepoRoot, CODE_WORKSPACE_FILE);
-//   await outputJSON(outputPath, { folders }, spaces);
+function defineCodeWorkspaceCommand(cac: CAC) {
+  cac
+    .command('code-workspace')
+    .usage('Update the `.code-workspace` file')
+    .option('--spaces [number]', '.code-workspace JSON file spaces.', {
+      default: 2,
+    })
+    .option('--auto-commit', 'auto commit .code-workspace JSON file.', {
+      default: false,
+    })
+    .action(runCodeWorkspace);
+}
 
-//   await prettierFormat(outputPath);
-//   if (autoCommit) {
-//     await gitAdd(CODE_WORKSPACE_FILE, monorepoRoot);
-//   }
-// }
-
-// async function runCodeWorkspace({ autoCommit, spaces }: CodeWorkspaceCommandOptions) {
-//   await createCodeWorkspace({
-//     autoCommit,
-//     spaces,
-//   });
-//   if (autoCommit) {
-//     return;
-//   }
-//   console.log('');
-//   console.log(colors.green(`${CODE_WORKSPACE_FILE} is updated!`));
-//   console.log('');
-// }
-
-// function defineCodeWorkspaceCommand(cac: CAC) {
-//   cac
-//     .command('code-workspace')
-//     .usage('Update the `.code-workspace` file')
-//     .option('--spaces [number]', '.code-workspace JSON file spaces.', {
-//       default: 2,
-//     })
-//     .option('--auto-commit', 'auto commit .code-workspace JSON file.', {
-//       default: false,
-//     })
-//     .action(runCodeWorkspace);
-// }
-
-// export { defineCodeWorkspaceCommand };
-console.log(1);
+export { defineCodeWorkspaceCommand };

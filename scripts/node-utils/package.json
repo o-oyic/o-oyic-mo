@@ -1,12 +1,28 @@
 {
-  "name": "@oyic/node-util",
+  "name": "@oyic/node-utils",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "author": "",
-  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "stub": "pnpm unbuild --stub"
+  },
+  "dependencies": {
+    "@manypkg/get-packages": "catalog:",
+    "find-up": "catalog:"
   }
 }
