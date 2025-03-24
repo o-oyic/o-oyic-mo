@@ -1,9 +1,16 @@
 import type { Linter } from 'eslint';
-import { javascript, vue, typescript, importPluginConfig, command, ignores } from './configs';
+import { javascript, vue, typescript, importPluginConfig, command, ignores, jsonc } from './configs';
+import type { ConfigWithExtendsArray } from './configs';
+import { customConfig } from './custom-config';
 
 type FlatConfig = Linter.Config;
 
-type FlatConfigPromise = FlatConfig | FlatConfig[] | Promise<FlatConfig> | Promise<FlatConfig[]>;
+type FlatConfigPromise =
+  | FlatConfig
+  | FlatConfig[]
+  | Promise<FlatConfig>
+  | Promise<FlatConfig[]>
+  | Promise<ConfigWithExtendsArray>;
 
 async function defineConfig(config: FlatConfig[] = []) {
   const configs: FlatConfigPromise[] = [
@@ -13,6 +20,8 @@ async function defineConfig(config: FlatConfig[] = []) {
     ignores(),
     vue(),
     javascript(),
+    jsonc(),
+    ...customConfig,
     ...config,
   ];
   const resolved = await Promise.all(configs);

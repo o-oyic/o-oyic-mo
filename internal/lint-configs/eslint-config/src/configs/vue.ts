@@ -2,7 +2,7 @@ import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import { interopDefault } from '../util';
 
-type ConfigWithExtendsArray = Parameters<typeof defineConfig>[0];
+export type ConfigWithExtendsArray = Parameters<typeof defineConfig>[0];
 
 export async function vue(): Promise<ConfigWithExtendsArray> {
   const [vuePlugin, vueParser, tsParser] = await Promise.all([

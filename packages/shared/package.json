@@ -1,11 +1,12 @@
 {
   "name": "@oyic/shared",
   "version": "1.0.0",
-  "description": "",
   "private": true,
+  "description": "",
   "type": "module",
-  "license": "MIT",
+  "keywords": [],
   "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
@@ -13,6 +14,5 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": []
+  }
 }

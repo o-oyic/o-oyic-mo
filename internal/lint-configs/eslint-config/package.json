@@ -4,6 +4,18 @@
   "private": true,
   "type": "module",
   "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
@@ -12,29 +24,19 @@
   "scripts": {
     "stub": "pnpm unbuild --stub"
   },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "license": "MIT",
   "devDependencies": {
     "@eslint/js": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
-    "eslint-plugin-vue": "catalog:",
-    "globals": "catalog:",
-    "typescript-eslint": "catalog:",
-    "vue-eslint-parser": "catalog:",
     "eslint-plugin-command": "catalog:",
     "eslint-plugin-import-x": "catalog:",
-    "eslint-plugin-unused-imports": "catalog:"
+    "eslint-plugin-jsonc": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
+    "eslint-plugin-vue": "catalog:",
+    "globals": "catalog:",
+    "jsonc-eslint-parser": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vue-eslint-parser": "catalog:"
   }
 }

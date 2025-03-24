@@ -4,21 +4,21 @@
   "private": true,
   "type": "module",
   "homepage": "https://github.com/o-oyic/o-oyic-mo",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
-    "directory": "internal/lint-config/stylelint-config"
-  },
+  "license": "MIT",
   "main": "./index.js",
   "module": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
       "default": "./index.js"
     }
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/lint-config/stylelint-config"
+  },
+  "types": "./index.d.ts",
   "dependencies": {
     "@stylistic/stylelint-plugin": "catalog:",
     "stylelint-scss": "catalog:"
@@ -27,9 +27,9 @@
     "postcss": "catalog:",
     "postcss-scss": "catalog:",
     "stylelint": "catalog:",
+    "stylelint-config-recommended": "catalog:",
     "stylelint-config-recommended-vue": "catalog:",
-    "stylelint-config-standard-scss": "catalog:",
     "stylelint-config-standard": "catalog:",
-    "stylelint-config-recommended": "catalog:"
+    "stylelint-config-standard-scss": "catalog:"
   }
 }

@@ -4,21 +4,21 @@
   "private": true,
   "type": "module",
   "homepage": "https://github.com/o-oyic/o-oyic-mo",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
-    "directory": "internal/lint-config/prettier-config"
-  },
+  "license": "MIT",
   "main": "./index.js",
   "module": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
       "default": "./index.js"
     }
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/lint-config/prettier-config"
+  },
+  "types": "./index.d.ts",
   "dependencies": {
     "prettier": "catalog:"
   }

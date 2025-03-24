@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "license": "MIT",
   "homepage": "https://github.com/o-oyic/o-oyic-mo",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
-    "directory": "internal/lint-config/tsconfig"
-  },
+  "license": "MIT",
   "files": [
     "base.json",
     "lib.json",
@@ -17,6 +12,11 @@
     "web-app.json",
     "web.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "internal/lint-config/tsconfig"
+  },
   "devDependencies": {
     "vite": "catalog:"
   }

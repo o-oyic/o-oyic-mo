@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "license": "MIT",
   "homepage": "https://github.com/o-oyic/o-oyic-mo",
+  "license": "MIT",
+  "bin": {
+    "oci": "./bin/oyic-cli.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
@@ -12,9 +15,6 @@
   },
   "scripts": {
     "stub": "pnpm unbuild --stub"
-  },
-  "bin": {
-    "oci": "./bin/oyic-cli.mjs"
   },
   "devDependencies": {
     "cac": "catalog:",
