@@ -62,7 +62,17 @@ export async function typescript(): Promise<Linter.Config[]> {
             varsIgnorePattern: '^_',
           },
         ],
-        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': [
+          'error',
+          {
+            functions: false,
+            classes: false,
+            variables: true,
+            enums: true,
+            typedefs: true,
+            ignoreTypeReferences: true,
+          },
+        ],
         '@typescript-eslint/no-var-requires': 'error',
         'unused-imports/no-unused-vars': 'off',
       },

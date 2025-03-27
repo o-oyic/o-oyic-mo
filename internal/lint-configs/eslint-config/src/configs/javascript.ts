@@ -38,7 +38,7 @@ export async function javascript(): Promise<Linter.Config[]> {
         'block-scoped-var': 'error', // 当变量在其定义的块之外被使用时
         'constructor-super': 'error', // 派生类（子类）的构造者必须调用 super()
         eqeqeq: ['error', 'always'], // 必须使用全等`===`，`!==`
-        'new-cap': ['error', { capIsNew: false, properties: true }], // 构造函数名首字母必须大写，普通函数首字母必须小写
+        'new-cap': ['error', { capIsNew: false, properties: false }], // 构造函数名首字母必须大写，普通函数首字母必须小写
         'no-alert': 'error', // 禁止alert
         'no-array-constructor': 'error', // 不允许使用Array(0,1,2)的方式构建数组
         'no-async-promise-executor': 'error', // 不允许在Promise的executor中使用异步
@@ -137,7 +137,7 @@ export async function javascript(): Promise<Linter.Config[]> {
             vars: 'all',
           },
         ],
-        'no-use-before-define': ['error', { classes: false, functions: false, variables: false }], // 禁止在变量定义之前使用它们，但允许函数和类的提升
+        // 'no-use-before-define': ['error', { classes: false, functions: false, variables: false }], // 禁止在变量定义之前使用它们，但允许函数和类的提升
         'no-useless-call': 'error', // 禁止不必要的call和apply
         'no-useless-catch': 'error', // 禁止不必要的catch子句
         'no-useless-computed-key': 'error', // 禁止在对象中使用不必要的计算属性
