@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
-import { interopDefault } from '../util';
+import { interopDefault } from '@oyic/kit';
 
 export type ConfigWithExtendsArray = Parameters<typeof defineConfig>[0];
 

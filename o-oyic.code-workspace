@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "@oyic/idb-docs",
+      "path": "docs/idb-docs",
+    },
+    {
       "name": "@oyic/commitlint-config",
       "path": "internal/lint-configs/commitlint-config",
     },

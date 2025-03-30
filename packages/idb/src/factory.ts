@@ -1,4 +1,5 @@
 import type { StorageEngineType } from './type/engine';
+import { interopDefault } from '@oyic/kit';
 
 class StorageFactory {
   private engineType: StorageEngineType | undefined;
@@ -16,11 +17,12 @@ class StorageFactory {
   }
 
   public async create(dbName: string, version = 1) {
-    const Adapter = (await import(`./adapter/${this.engineType}`)) as {
-      // TODO default需要修改为具体的适配器类型
-      default: new (dbName: string, version: number) => any;
-    };
-    return new Adapter.default(dbName, version);
+    // TODO default需要修改为具体的适配器类型
+    const Adapter = await interopDefault<new (dbName: string, version: number) => any>(
+      import(`./adapter/${this.engineType}`),
+    );
+
+    return new Adapter(dbName, version);
   }
 
   /**

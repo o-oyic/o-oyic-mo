@@ -1,5 +1,5 @@
 import type { Linter, ESLint } from 'eslint';
-import { interopDefault } from '../util';
+import { interopDefault } from '@oyic/kit';
 
 export async function importPluginConfig(): Promise<Linter.Config[]> {
   const [pluginImport] = await Promise.all([

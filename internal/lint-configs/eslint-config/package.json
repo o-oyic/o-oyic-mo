@@ -27,6 +27,7 @@
   "types": "./dist/index.d.ts",
   "devDependencies": {
     "@eslint/js": "catalog:",
+    "@oyic/kit":"workspace:*",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-command": "catalog:",

@@ -6,6 +6,10 @@ dist/*
 yarn.lock
 package-lock.json
 
+.dumi/tmp
+.dumi/*
+.dumi/tmp-production
+
 # local env files
 .env.local
 .env.*.local

@@ -9,6 +9,9 @@ CODEOWNERS
 .nitro
 .output
 
+.dumi
+.dumirc.ts
+
 
 **/*.svg
 **/*.sh
@@ -19,3 +22,5 @@ public
 
 *.json
 *.jsonc
+*.md
+*.mdx

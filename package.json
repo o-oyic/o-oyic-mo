@@ -24,6 +24,7 @@
     "@oyic/cli": "workspace:*",
     "@oyic/commitlint-config": "workspace:*",
     "@oyic/eslint-config": "workspace:*",
+    "@oyic/kit": "workspace:*",
     "@oyic/node-utils":"workspace:*",
     "@oyic/prettier-config": "workspace:*",
     "@oyic/stylelint-config": "workspace:*",
