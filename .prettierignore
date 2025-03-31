@@ -9,8 +9,8 @@ CODEOWNERS
 .nitro
 .output
 
-.dumi
-.dumirc.ts
+.dumi/*
+.dumi*
 
 
 **/*.svg
