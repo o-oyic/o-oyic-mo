@@ -15,7 +15,9 @@
     "lint:es": "eslint . --cache --fix",
     "lint": "oci lint",
     "format": "oci lint --format",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "dev": "turbo dev",
+    "dev:demo": "pnpm -F vue-demo run dev"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",
@@ -25,7 +27,7 @@
     "@oyic/commitlint-config": "workspace:*",
     "@oyic/eslint-config": "workspace:*",
     "@oyic/kit": "workspace:*",
-    "@oyic/node-utils":"workspace:*",
+    "@oyic/node-utils": "workspace:*",
     "@oyic/prettier-config": "workspace:*",
     "@oyic/stylelint-config": "workspace:*",
     "@oyic/tsconfig": "workspace:*",

@@ -9,10 +9,12 @@
   ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "default": "./dist/index.mjs"
     }
   },
   "repository": {
@@ -21,6 +23,7 @@
     "directory": "packages/kit"
   },
   "scripts": {
-    "stub": "pnpm unbuild --stub"
+    "build": "pnpm unbuild",
+      "stub": "pnpm unbuild --stub"
   }
 }

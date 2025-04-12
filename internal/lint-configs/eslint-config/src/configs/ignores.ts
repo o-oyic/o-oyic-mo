@@ -4,6 +4,8 @@ export async function ignores(): Promise<Linter.Config[]> {
   return [
     {
       ignores: [
+        '**/examples/**',
+        'examples/**',
         '**/node_modules',
         '**/dist',
         '**/dist-*',

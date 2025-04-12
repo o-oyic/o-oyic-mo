@@ -52,6 +52,7 @@ export async function typescript(): Promise<Linter.Config[]> {
           },
         ],
         '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/unified-signatures': 'off',
         // "@typescript-eslint/no-namespace": "off",
         // "@typescript-eslint/no-non-null-assertion": "error",
         // "@typescript-eslint/no-unused-expressions": "off",

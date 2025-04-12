@@ -1,0 +1,21 @@
+{
+  "name": "@oyic/oc-store",
+  "version": "1.0.0",
+  "type":"module",
+  "keywords": [],
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-oyic/o-oyic-mo.git",
+    "directory": "packages/oc-store"
+  },
+  "dependencies": {
+    "@oyic/kit": "workspace:*"
+  }
+}

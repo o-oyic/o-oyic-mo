@@ -17,10 +17,10 @@ async function defineConfig(config: FlatConfig[] = []) {
     importPluginConfig(),
     typescript(),
     command(),
-    ignores(),
     vue(),
     javascript(),
     jsonc(),
+    ignores(),
     ...customConfig,
     ...config,
   ];

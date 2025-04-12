@@ -12,6 +12,10 @@ CODEOWNERS
 .dumi/*
 .dumi*
 
+examples
+examples/*
+examples/**/*
+
 
 **/*.svg
 **/*.sh

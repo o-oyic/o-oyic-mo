@@ -187,6 +187,7 @@ export async function javascript(): Promise<Linter.Config[]> {
         'valid-typeof': ['error', { requireStringLiterals: true }], // 强制将 typeof 表达式与有效的字符串字面量进行比较
         'vars-on-top': 'error', // 要求变量声明放在作用域顶部
         yoda: ['error', 'never'], // 禁止Yoda条件（如if (42 === age)）
+        'no-undef': 'off',
       },
     },
   ];

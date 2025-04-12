@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "name": "@oyic/idb-docs",
-      "path": "docs/idb-docs",
+      "name": "vue-demo",
+      "path": "examples/vue-demo",
     },
     {
       "name": "@oyic/commitlint-config",
@@ -33,16 +33,16 @@
       "path": "internal/vite-config",
     },
     {
-      "name": "@oyic/idb",
-      "path": "packages/idb",
-    },
-    {
       "name": "@oyic/idoc",
       "path": "packages/idoc",
     },
     {
       "name": "@oyic/kit",
       "path": "packages/kit",
+    },
+    {
+      "name": "@oyic/oc-store",
+      "path": "packages/oc-store",
     },
     {
       "name": "oyic",

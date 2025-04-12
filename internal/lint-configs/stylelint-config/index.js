@@ -3,7 +3,7 @@
  */
 export default {
   extends: ['stylelint-config-standard'],
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json', '**/*.md'],
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json', '**/*.md', 'examples/**/*'],
   overrides: [
     {
       // scss文件推荐格式化配置
